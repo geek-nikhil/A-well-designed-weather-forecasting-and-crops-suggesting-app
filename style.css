@@ -1,0 +1,215 @@
+
+body{
+    background-color: rgb(18, 21, 48);
+    color: #ffffff;
+   }
+
+#weatherContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 300px;
+    width: 100%; /* Adjusted for responsiveness */
+    max-width: 1300px; 
+}
+
+#iconsContainer {
+    display: flex; /* Use flexbox to arrange children in a row */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    justify-content: space-around; /* Adjust as needed for spacing */
+    align-items: center; /* Center children vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    height: 240px;
+    width: 100%; /* Adjusted for responsiveness */
+    max-width: 1200px; 
+}
+
+.icons {
+    flex: 0 0 calc(20% - 40px); /* Adjusted for responsiveness with margin included */
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.image {
+    height: 140px;
+    width: 100%;
+}
+
+.imgClass {
+    height: 140px;
+    width: 100%;
+}
+
+.weather {
+    margin: 5px;
+    /* background-color: rgb(106, 215, 255); */
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.minValues,
+.maxValues {
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    height: 25px;
+    width: 85px;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .icons {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+
+/*-----------navbar--------------------*/
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s; /* Add a smooth transition effect */
+}
+
+/* Change color on hover */
+nav a:hover {
+    color: #ffd700; /* Change to your desired hover color */
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
+
+#inputContainer{
+    display: flex;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+#cityInput{
+    height: 22px;
+    border-radius: 8px;
+    border:solid 5px  rgb(201, 208, 67) ;
+    font-size: x-large;
+    color:darkslategray;
+}
+#button{
+    height: 40px;
+   width: 80px;
+   background-color: rgb(175, 131, 215);
+   color: aliceblue;
+   border-radius:5px;
+}
+/* Reset some default styles */
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+  }
+  
+ 
+  
+  /* Style for the search input */
+  #cityInput {
+    padding: 8px;
+    width: 400px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  /* Style for the search button with class name */
+  #button {
+    background-color: #4285f4; /* Google Blue */
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 8px 16px;
+    margin-left: -1px; /* To slightly overlap the input border */
+    border: 1px solid #4285f4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect */
+  #button:hover {
+    background-color: #8091b7; /* Slightly darker shade on hover */
+  }
+ #inputContainer{
+    position: relative;
+    position: absolute;
+    top: 12%;
+ }
+ .search{
+    display: flex;
+    position: relative;
+    position: absolute;
+    top: 11%;
+    right:34%;
+    gap: 14px;
+ }
+ #cityName{
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: absolute;
+    top: 24%;
+    right:45%;
+ }
+
+ .containerweather{
+    display: none;
+ }
