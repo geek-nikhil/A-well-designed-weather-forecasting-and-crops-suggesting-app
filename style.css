@@ -6,7 +6,7 @@ body{
 
 #weatherContainer {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -81,7 +81,7 @@ body {
 }
 
 nav {
-    background-color: #333;
+    background-color: #03020e;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -213,3 +213,50 @@ button {
  .containerweather{
     display: none;
  }
+ #aqi-container {
+    text-align: center;
+    margin-top: -150px;
+    margin-right: 600px;
+}
+
+#aqi-circle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    background: radial-gradient(transparent 50%, #ccc 50%); /* Transparent center with default color outer circle */
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Color variations based on AQI levels */
+#aqi-circle.good {
+    background: radial-gradient(transparent 50%, #00cc00 50%); /* Green for good air quality */
+}
+
+#aqi-circle.moderate {
+    background: radial-gradient(transparent 50%, #ffcc00 50%); /* Yellow for moderate air quality */
+}
+
+#aqi-circle.unhealthy {
+    background: radial-gradient(transparent 50%, #ff3300 50%); /* Red for unhealthy air quality */
+}
+
+
+.read-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4b0082; /* Dark Purple */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    left: 40%;
+}
+
+.read-more-button:hover {
+    background-color: #2a0050; /* Darker Purple on hover */
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Weather App</title>
+    <style>
+        body {
+            background-color: #2c1654; /* Dark Purple Background Color */
+            color: #ffffff; /* Text Color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent White Background */
+            padding: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dark Shadow */
+            width: 500px;
+            text-align: center;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffffff; /* White Border */
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent White Background */
+            color: #ffffff; /* Text Color */
+            transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .form-input:hover {
+            border-color: #5a2a82; /* Purple Border Color on Hover */
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly Darker White Background on Hover */
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5a2a82; /* Purple Button Color */
+            color: #ffffff; /* Button Text Color */
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .form-button:hover {
+            background-color: #421c5c; /* Darker Purple Button Color on Hover */
+        }
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            animation: snowfallAnimation 50s linear infinite;
+        }
+
+        @keyframes snowfallAnimation {
+            0% {
+                transform: translateY(0);
+            }
+          
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#backButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none; /* Remove the default underline for hyperlinks */
+    border-radius: 5px;
+}
+
+#backButton:hover {
+    background-color: #45a049; /* Change color on hover if desired */
+}
+
+    </style>
+</head>
+<body>
+    
+    <a href="index.html" id="backButton">Back</a>
+
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input class="form-input" type="text" name="name" placeholder="Your Name">
+            <input class="form-input" type="email" name="email" placeholder="Your Email">
+            <textarea class="form-input" name="message" placeholder="Your Message"></textarea>
+            <button class="form-button" type="submit">Send Message</button>
+        </form>
+    </div>
+     <script>
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+            snowflake.style.top = `${Math.random() * window.innerHeight}px`;
+            const randomColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+            snowflake.style.backgroundColor = randomColor;
+
+            document.body.appendChild(snowflake);
+        }
+    </script>
+</body>
+</html>

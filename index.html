@@ -11,12 +11,12 @@
 <body onload="DefaultScreen()">
     
     <nav>
-        <h1>ClimaCrops Advisor</h1>
+        <h1>AgroForecast</h1>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     <div id = "colour">
@@ -24,8 +24,16 @@
         <input type="text" placeholder="Enter your city name" id="cityInput">
         <button type="button" onclick="GetInfo()" id="button">Search</button>        
     </div>
+
+    
     <h2 id="cityName">---London---</h2>
     <div id = "weatherContainer" class="containerweather">
+        <div id="aqi-container">
+            <h2>Air Quality Index (AQI)</h2>
+            <div id="aqi-circle">Loading...</div>
+            <a href="facts.html" class="read-more-button">Read More</a>
+        </div>
+        
         <div id="iconsContainer">    
             <div class = "icons">
                 <p class="weather" id="day1"></p>
