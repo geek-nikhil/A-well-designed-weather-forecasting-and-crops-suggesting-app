@@ -10,7 +10,7 @@ var query = "aqi";
     console.log(query); 
     checknews(query);
   }
-  
+
 sea ="";
 var cardData = [
     { title: "Card " + t, content: "This is the content of Card 1." },
@@ -67,4 +67,3 @@ console.log(k);
     }
     // Add cards to the container
     checknews(query);
-  

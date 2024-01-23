@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    body {
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
 body {
     background: rgba(7, 48, 135, 0.671);
 }
@@ -116,7 +138,38 @@ body {
 
 #cardContainer {
     margin-left: 70px;
+
 }
+#contentContainer {
+    position: relative;
+}
+
+#navigationButtons {
+    position: absolute;
+    bottom: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+#navigationButtons button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigationButtons button:disabled {
+    background-color: #ccc;
+   
+}
+.btn{
+    display: block;
+}
+
 
 
 </style>
@@ -136,9 +189,27 @@ body {
         <button class="search-button" onclick="search()">Search</button>
     </div>
 
-<div id="cardContainer"></div>
+<div id="cardContainer">
+</div>
+<div id="navigationButtons" >
+    <button onclick="decrepage()" id="prevButton">Previous</button>
+    <button onclick="increpage()" id="nextButton">Next</button>
+</div>
 
-<script src="facts.js"></script>
+<footer>
+    <div class="footer-container">
+        <div class="footer-left">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+            <p>Contact us: <a href="mailto:info@yourcompany.com">info@yourcompany.com</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Add these buttons where you want your page changer to appear -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
