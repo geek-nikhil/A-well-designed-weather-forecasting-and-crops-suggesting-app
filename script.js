@@ -59,8 +59,11 @@ fetch('https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&appi
         document.getElementById("day" + (i+1) + "Min").innerHTML = "Min: " + Number(data.list[i].main.temp_min - 273.15).toFixed(1)+ "°";
   
     }
-    for(i = 0; i<5; i++){
-        document.getElementById("day" + (i+1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
+    for (let i = 0; i < 5; i++) {
+        let currentDay = parseInt(data.list[i].dt_txt.slice(8, 10));
+        document.getElementById("day" + (i + 1) + "Max").innerHTML = "Max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
+        document.getElementById("time" + (i + 1)).innerHTML = data.list[i].dt_txt.slice(0, 8) + " " + (currentDay + i);
+        console.log(currentDay + i);
     }
 
      for(i = 0; i<5; i++){
@@ -206,7 +209,7 @@ let k = 0;
 let t = 0;
 let sea = document.getElementById('cardContainer');
 let parentElement = document.getElementById('cardContainer');
-let query = 'aqi';
+let query ="aqi";
 
 function search() {
     parentElement.innerHTML = '';
@@ -221,6 +224,7 @@ var cardData = [
 ];
 
 async function checknews(query) {
+    console.log(query)
     sea.innerHTML = '';
     const apiKey = 'd80ba0c8034e4dd79ad334819a0d88f4';
     const api = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}&page=${page}`;
@@ -258,9 +262,11 @@ function createCard(title, content, image) {
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
+      <div id="cards">
         <img src="${image}" id="img">
         <h3>${title}</h3>
         <p>${content}</p>
+        <div/>
     `;
     return card;
 }
