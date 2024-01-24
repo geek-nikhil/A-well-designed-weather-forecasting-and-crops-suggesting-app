@@ -458,3 +458,11 @@ button {
 img{
     border-radius: 40px;
 }
+#location{
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+#locate{
+    width: 100px;
+}
