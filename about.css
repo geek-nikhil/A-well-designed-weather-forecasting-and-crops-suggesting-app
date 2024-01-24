@@ -1,0 +1,33 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black; /* Dark background color */
+    color: #fff; /* Text color */
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #4caf50; /* Green color for headings */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: #4caf50;
+    margin-top: 20px;
+}
+
+
