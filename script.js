@@ -209,7 +209,7 @@ let k = 0;
 let t = 0;
 let sea = document.getElementById('cardContainer');
 let parentElement = document.getElementById('cardContainer');
-let query ="aqi";
+let query ="delhi weather";
 
 function search() {
     parentElement.innerHTML = '';
@@ -317,3 +317,10 @@ input.addEventListener("keypress", function(event) {
       document.getElementById("button").click();
     }
   });
+
+
+    var loader = document.getElementById("preloader");
+
+    window.addEventListener("load", function() {
+        loader.style.display = "none";
+    });

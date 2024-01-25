@@ -467,3 +467,12 @@ img{
 #locate{
     width: 100px;
 }
+#preloader{
+    background:#ffffff url(images/dgaeigdiuea.gif) no-repeat center center;
+    background-size: 25%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
